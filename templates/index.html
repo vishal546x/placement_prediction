@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="image-container">
+  <img src="{{url_for('static',filename='place_image.jpg')}}" alt="image">
+
+  <!-- Button on top right -->
+  <div class="top-right-btn">
+    <form action="\predi"><button>Predict</button></form>
+    
+    
+  </div>
+
+  <!-- Headings on top left -->
+  <div class="top-left-text">
+    <h1>Placement</h1>
+    <h1>Prediction</h1>
+  </div>
+</div>
+
+
+    
+</body>
+</html>

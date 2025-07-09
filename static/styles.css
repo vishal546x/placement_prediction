@@ -1,0 +1,216 @@
+ body{
+            background-color: black;
+        }
+        .div-container{
+            height: auto;
+            width: auto;
+            
+            justify-content: center;
+            display: flex;
+        }
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+/* LEFT SIDE TEXT */
+.top-left-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-align: left;
+  z-index: 2;
+}
+
+.top-left-text h1 {
+  margin: 5px 0;
+  color: black;
+  font-size: 100px;
+}
+
+/* RIGHT SIDE BUTTON */
+.top-right-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  size: 50px;
+}
+
+
+.top-right-btn button {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease; /* 💫 smooth animation */
+  box-shadow: 0 0 10px rgba(128, 0, 128, 0.5);
+}
+
+/* 💥 Hover = power-up */
+.top-right-btn button:hover {
+  transform: scale(1.2); /* grows */
+  background-color: #a020f0;
+  box-shadow: 0 0 20px rgba(128, 0, 128, 0.8);
+}
+.box {
+    width: 500px;
+    height: auto;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Outer glow layer */
+.box::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #00f0ff 25%,
+        #ff00ff 50%,
+        #00f0ff 75%,
+        #ffffff 100%
+    );
+    background-size: 400% 400%;
+    animation: shine-border 4s linear infinite;
+    z-index: -1;
+    border-radius: 12px;
+}
+
+/* Keyframes to animate the gradient border */
+@keyframes shine-border {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+        .image img{
+            width: 400px;
+            height: auto;
+
+        }
+        .heading{
+            color:white;    
+           font-size: 100px;
+        }
+        .heading-box{
+            width: 500px;
+            height: auto;
+            text-align: center;  
+        }
+        .sub-heading{
+            color:white;    
+           font-size: 50px;
+        }
+        label{
+            color: black;
+            font-size: 20px;
+        }
+        input{
+            font-size: 15px;
+        }
+        button{
+                padding: 12px 30px;
+                font-size: 18px;
+                font-weight: bold;
+                color: white;
+                background: linear-gradient(to left, #3cabe7 50%, #4e1797 50%);
+                background-size: 200% 100%;
+                 background-position: left bottom;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-position 0.5s ease, color 0.5s ease;
+        }
+        button:hover{
+            background-position: right bottom;
+        }
+        .result{
+            color: black;
+            font-size: 50px;
+        }
+        .custom-selection {
+        width: 200px;
+        appearance: none;            /* REMOVE default ugly browser styles */
+        background-color: #1a1a1a;   /* Dark background */
+        color: #00f0ff;              /* Light neon text */
+    padding: 10px 40px 10px 15px;
+    font-size: 15px;
+    border: 2px solid #00f0ff;
+    border-radius: 8px;
+    cursor: pointer;
+  position: relative;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%2300f0ff" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.custom-select:hover {
+  box-shadow: 0 0 15px #00f0ff;
+  border-color: #ff00ff;
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #ff00ff;
+  box-shadow: 0 0 20px #ff00ff;
+}
+.custom-input {
+  width: 200px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  
+  background-color: #111;
+  border: 2px solid #00f0ff;
+  border-radius: 10px;
+  color: #00f0ff; /* Always visible */
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* When user clicks or types */
+.custom-input:focus {
+  border-color: #ff00ff;
+  box-shadow: 0 0 20px #ff00ff;
+  background-color: #0a0a0a;
+  color: aqua;
+}
+
+/* Placeholder styling (light text) */
+.custom-input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
