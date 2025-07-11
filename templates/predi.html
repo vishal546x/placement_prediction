@@ -9,6 +9,9 @@
     <div class="div-container">
         <div class="box">
                 <h1>Fill the form</h1>
+                {% if error %}
+                <p class="result">Error: {{error}}</p>
+                {% endif %}
                 <form action="/pred" method="POST">
                     <label for="id">Student ID:</label><br>
                     <input type="number" class="custom-input" name="id"><br><br>
@@ -50,16 +53,10 @@
 
                      <label for="HSC_Marks">HSC_Marks:</label><br>
                     <input type="number" class="custom-input" name="HSC_Marks" placeholder="0-100"><br><br>
-                   
 
-
-                    
-                    
                     <button type="submit">submit</button>
                </form>
-                {% if prediction %}
-                <p class="result">Result:{{prediction}}</p>
-                {% endif %}
+                
         </div>
     </div>
 </body>

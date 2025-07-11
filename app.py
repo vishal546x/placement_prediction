@@ -20,28 +20,33 @@ def new_feature(li):
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("home.html")
 
 
 @app.route("/pred", methods=["POST"])
 def pred():
     input=[]
+    try:
+        for i in cols_to_train:
+            input.append(float(request.form[i]))
 
-    for i in cols_to_train:
-        input.append(float(request.form[i]))
-
-    input.append(new_feature(f3))
-    finals=cols_to_train+['f3']
-    input_df=pd.DataFrame([input],columns=finals)
+        input.append(new_feature(f3))
+        finals=cols_to_train+['f3']
+        input_df=pd.DataFrame([input],columns=finals)
     
-    ypred=model.predict(input_df)
-    result = "PLACED 🏆" if ypred[0] == 1 else "NOT PLACED ❌"
-    return render_template("predi.html",prediction=result)
+        ypred=model.predict(input_df)
+        result = "PLACED 🏆" if ypred[0] == 1 else "NOT PLACED ❌"
+        return render_template("result.html",prediction=result)
+    except Exception as e:
+        return render_template("predi.html",error="Fill the inputs")
 
 
 @app.route("/predi")
 def predi():
     return render_template("predi.html")
+@app.route("/home")
+def home_page():
+    return render_template("home.html")
     
 if __name__=='__main__':
     app.run(debug=True)
