@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loan Approval</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Placement Prediction</h1>
+    {%if prediction %}
+    <p class="label">Result: {{prediction}}</p>
+    {% endif %}
+    
+
+    <form action="/home">
+    <button type="submit" class="gold-button">Home</button>
+  </form>
+  <form action="/predi">
+    <button type="submit" class="gold-button">Predict Again</button>
+  </form>
+  </div>
+  
+</body>
+</html>

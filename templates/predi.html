@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+    <div class="div-container">
+        <div class="box">
+                <h1>Fill the form</h1>
+                {% if error %}
+                <p class="result">Error: {{error}}</p>
+                {% endif %}
+                <form action="/pred" method="POST">
+                    <label for="id">Student ID:</label><br>
+                    <input type="number" class="custom-input" name="id"><br><br>
+                   
+                    <label for="CGPA">CGPA:</label><br>
+                    <input type="number" class="custom-input" name="CGPA"  step="0.0001" min="0" max="10"placeholder=" 0-10"><br><br>
+
+                    <label for="Internships">Internships Completed:</label><br>
+                    <input type="number" class="custom-input" name="Internships" placeholder="0-100"><br><br>
+
+                    <label for="projects">Projects Completed:</label><br>
+                    <input type="number" class="custom-input" name="Projects" placeholder="0-00"><br><br>
+
+                    <label for="workshop">Workshops/Certifications:</label><br>
+                    <input type="number" class="custom-input" name="Workshops/Certifications" placeholder="0-100"><br><br>
+
+                    <label for="AptitudeTestScore">AptitudeTestScore:</label><br>
+                    <input type="number" class="custom-input" name="AptitudeTestScore" placeholder="0-100"><br><br>
+
+                    <label for="SoftSkillsRating">SoftSkillsRating:</label><br>
+                    <input type="number" class="custom-input" name="SoftSkillsRating" step="0.0001" min="0" max="5" placeholder="0-5"><br><br>
+
+                   
+
+                   <label for="ExtracurricularActivities">ExtracurricularActivities:</label><br>
+                    <select class="custom-selection" name="ExtracurricularActivities">
+                        <option value=0>NO</option>
+                        <option value=1>Yes</option>
+                    </select><br><br>
+
+                    <label for="PlacementTraining">PlacementTraining:</label><br>
+                    <select class="custom-selection" name="PlacementTraining">
+                        <option value=0>NO</option>
+                        <option value=1>Yes</option>
+                    </select><br><br>
+
+                     <label for="SSC_Marks">SSC_Marks:</label><br>
+                    <input type="number" class="custom-input" name="SSC_Marks" placeholder="0-100"><br><br>
+
+                     <label for="HSC_Marks">HSC_Marks:</label><br>
+                    <input type="number" class="custom-input" name="HSC_Marks" placeholder="0-100"><br><br>
+
+                    <button type="submit">submit</button>
+               </form>
+                
+        </div>
+    </div>
+</body>
+</html>

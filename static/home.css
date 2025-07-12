@@ -1,0 +1,164 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fb;
+  color: #1f3b7c;
+  overflow: hidden;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* BG IMAGE */
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+/* TEXT HEADING */
+.heading {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  color: white;
+  text-shadow: 2px 2px 8px #000;
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+.heading h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.heading h2 {
+  font-size: 28px;
+  font-weight: normal;
+  color: #e0e0e0;
+  margin-top: 10px;
+}
+
+/* BUTTON */
+.top-right-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+
+.top-right-btn button {
+  padding: 12px 28px;
+  font-size: 16px;
+  color: white;
+  background: #1f3b7c;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(31, 59, 124, 0.3);
+  transition: 0.3s ease;
+}
+
+.top-right-btn button:hover {
+  background: #2a4aa0;
+  transform: scale(1.05);
+}
+
+/* INFO CARD */
+.info-card {
+  position: absolute;
+  bottom: 60px;
+  left: 40%;
+  transform: translateX(-50%);
+  background: white;
+  color: #1f3b7c;
+  padding: 40px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(31, 59, 124, 0.15);
+  text-align: center;
+  animation: fadeUp 1s ease-out forwards;
+  z-index: 3;
+}
+
+.info-card h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #1f3b7c;
+}
+
+.info-card p {
+  font-size: 16px;
+  color: #444d66;
+  margin-bottom: 20px;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-card li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-card li::before {
+  content: '✅';
+  margin-right: 10px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .heading h1 {
+    font-size: 40px;
+  }
+  .heading h2 {
+    font-size: 20px;
+  }
+  .top-right-btn button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

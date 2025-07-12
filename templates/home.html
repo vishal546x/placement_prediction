@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Placement Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+
+<body>
+  <div class="hero">
+    <img src="{{url_for('static',filename='place_image.jpg')}}" class="bg-img" alt="Hero Image"/>
+
+    <div class="heading">
+      <h1>Placement</h1>
+      <h2>Prediction System</h2>
+    </div>
+
+    <div class="top-right-btn">
+      <form action="/predi">
+        <button type="submit">Predict</button>
+      </form>
+    </div>
+
+    <div class="info-card">
+      <h2>Know your placement chance</h2>
+      <p>This system predicts if you’ll get placed based on your CGPA, skills, and activities.</p>
+      <ul>
+        <li>Accurate ML Model</li>
+        <li>Real Training Data</li>
+        <li>Free to Use</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
